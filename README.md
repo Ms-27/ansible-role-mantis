@@ -1,7 +1,7 @@
-Role Name
+Mantis
 =========
 
-A brief description of the role goes here.
+Role that install MantisBT (webapp) and configure it.
 
 Requirements
 ------------
