@@ -1,18 +1,12 @@
 ---
 # handlers file for ansible-role-mantis
-#
-- name: Décompresser l'archive mantis
-  unarchive:
-          remote_src: yes
-          src: ~/mantisbt-2.23.0.tar.gz
-          dest: /var/www/html/
-  listen: Installation mantis
+  - name: Décompresser l'archive mantis
+    unarchive:
+      remote_src: yes
+      src: ~/mantisbt-2.23.0.tar.gz
+      dest: /var/www/html/
+    listen: Installation mantis
 
-- name: Renommer le répertoire de mantis
-  shell: mv /var/www/html/mantisbt-2.23.0 /var/www/html/mantisbt
-  listen: Installation mantis
-
-- name: Relancer apache
-  service:
-          name: apache2
-          state: restarted
+  - name: Renommer le répertoire de mantis
+    shell: mv /var/www/html/mantisbt-2.23.0 /var/www/html/mantisbt
+    listen: Installation mantis
